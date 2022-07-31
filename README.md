@@ -1,4 +1,4 @@
-# go_slice_fn
+# slice_fn
 
 This go module provides simple methods for manipulations of slices via callback functions. Examples can be found under `slice_fn_test.go`.
 
