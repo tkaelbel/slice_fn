@@ -10,7 +10,7 @@ calling a provided function on every element in the calling array.
 ```golang
     in := []int{1, 2, 3, 4, 5}
 
-	actual := slice_fn.Map(in, func(val int) int { return val + 1 })
+    actual := slice_fn.Map(in, func(val int) int { return val + 1 })
     
     ->> [2, 3, 4, 5, 6]
 ```
@@ -21,7 +21,7 @@ filtered down to just the elements from the given array that pass the test imple
 ```golang
     in := []int{1, 2, 2, 4, 2}
 
-	actual := slice_fn.Filter(in, func(val int) bool { return val == 2 })    
+    actual := slice_fn.Filter(in, func(val int) bool { return val == 2 })    
 
     ->> [2, 2, 2]
 ```
@@ -33,7 +33,7 @@ The final result of running the reducer across all elements of the array is a si
 ```golang
     in := []int{1, 2, 2, 4, 2}
 
-	actual := slice_fn.Reduce(in, 0, func(previous int, current int) int { return previous + current })
+    actual := slice_fn.Reduce(in, 0, func(previous int, current int) int { return previous + current })
 
     ->> 11
 ```
@@ -44,7 +44,7 @@ If no values satisfy the testing function, object/type with initialized values i
 ```golang
     input := []int{1, 2, 3, 4, 5}
 
-	actual := slice_fn.Find(input, func(val int) bool { return val == 4 })
+    actual := slice_fn.Find(input, func(val int) bool { return val == 4 })
     
     ->> 4
 ```
@@ -55,7 +55,7 @@ If no elements satisfy the testing function, -1 is returned.
 ```golang
     input := []int{1, 2, 3, 4, 5}
 
-	actual := slice_fn.FindIndex(input, func(val int) bool { return val == 3 })
+    actual := slice_fn.FindIndex(input, func(val int) bool { return val == 3 })
 
     ->> 2
 ```
@@ -66,7 +66,7 @@ If no values satisfy the testing function, object/type with initialized values i
 ```golang
     input := []int{1, 5, 3, 4, 5}
 
-	actual := slice_fn.FindLast(input, func(val int) bool { return val == 5 })
+    actual := slice_fn.FindLast(input, func(val int) bool { return val == 5 })
 
     ->> 5
 ```
@@ -77,7 +77,7 @@ If no values satisfy the testing function, -1 is returned.
 ```golang
     input := []int{1, 5, 3, 4, 5}
 
-	actual := slice_fn.FindLast(input, func(val int) bool { return val == 5 })
+    actual := slice_fn.FindLast(input, func(val int) bool { return val == 5 })
 
     ->> 4
 ```
@@ -88,7 +88,7 @@ The ForEach() method executes a provided function once for each array element.
     in := []int{1, 2, 2, 4, 2}
     sum := 0
 
-	slice_fn.ForEach(input, func(val int) { sum += val }) 
+    slice_fn.ForEach(input, func(val int) { sum += val }) 
 
     ->> 11
 ```
